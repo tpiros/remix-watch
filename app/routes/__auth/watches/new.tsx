@@ -27,7 +27,7 @@ export const action = async ({ request }: ActionArgs) => {
   }
   await supabase.from('watches').insert(fields);
   return redirect(`/watches`, {
-    headers: request.headers,
+    headers: response.headers,
   });
 };
 
